@@ -1,25 +1,24 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Person from './Person/Person';
 
 function App() {
   return (
+    //we can have only root element
+    //JSX
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Hi, I am a react App</h1>
+      <p>This is really working</p>
+      <Person name = "ishita" age="22"/>
+      <Person name = "anand" age = "23"/>
+      <Person name = "savvy" age = "45">My hobby: cooking</Person>
     </div>
   );
+
+  //This is internal compilation of above JSX
+  // return(
+  //   React.createElement('div',{className : 'App'}, React.createElement('h1',null,'Nice cool'))
+  // );
 }
 
 export default App;
